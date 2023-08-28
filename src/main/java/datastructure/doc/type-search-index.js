@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"datastructure","l":"BiListNode"},{"p":"datastructure","l":"LruCache"},{"l":"所有类","u":"allclasses-index.html"}];updateSearchResults();
