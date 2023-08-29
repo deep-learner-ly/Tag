@@ -40,6 +40,12 @@ public class 前K个高频元素 {
 
         // 使用 Collections.sort() 对列表进行排序
         Collections.sort(entryList, Map.Entry.comparingByValue());
+//        Collections.sort(entryList, (v1,v2)->(
+//                v1.getValue().equals(v2.getValue()) ?
+//                v1.getKey().equals(v2.getKey())?
+//                v1.getKey().hashCode()- v2.getKey().hashCode():
+//                v1.getKey().compareTo(v2.getKey()):
+//                v1.getValue().compareTo(v2.getValue())));
         int [] res = new int[k];
         for (int i = 0; i < k; i++) {
             res[i] = entryList.get(i+entryList.size()-k).getKey();
