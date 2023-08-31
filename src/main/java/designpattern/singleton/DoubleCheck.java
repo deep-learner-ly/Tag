@@ -1,4 +1,4 @@
-package basics.singleton;
+package designpattern.singleton;
 
 /**
  * @author LongyunBian

@@ -1,6 +1,4 @@
-package basics.singleton;
-
-import java.util.ArrayList;
+package designpattern.singleton;
 
 /**
  * @author LongyunBian
