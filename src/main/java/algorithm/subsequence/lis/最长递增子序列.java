@@ -1,4 +1,4 @@
-package algorithm.subsequence;
+package algorithm.subsequence.lis;
 
 /**
  * @author LongyunBian

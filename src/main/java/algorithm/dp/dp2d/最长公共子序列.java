@@ -1,4 +1,4 @@
-package algorithm.dp2d;
+package algorithm.dp.dp2d;
 
 /**
  * @author LongyunBian

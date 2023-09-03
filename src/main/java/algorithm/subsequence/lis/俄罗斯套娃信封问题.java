@@ -1,6 +1,4 @@
-package algorithm.interval;
-
-import algorithm.subsequence.最长递增子序列;
+package algorithm.subsequence.lis;
 
 import java.util.Arrays;
 

@@ -15,4 +15,15 @@ public class Utils {
             --j;
         }
     }
+    public static int strStr(String str, String target,int start){
+        //构建长度与needle相等的滑动窗口
+        int left = start, right = start +  target.length();
+        //不断移动滑动窗口，窗口的子串与目标子串进行匹配
+        while (right <= str.length() ) {
+            if (str.substring(left, right).equals(target)) return left;
+            left++;
+            right++;
+        }
+        return -1;
+    }
 }
