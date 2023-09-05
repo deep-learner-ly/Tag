@@ -18,6 +18,7 @@ public class 后序遍历 {
         while(!st.isEmpty() || node!=null){
             while(node!=null){
                 res.push(node.val);
+
                 st.push(node);
                 node = node.right;
             }
