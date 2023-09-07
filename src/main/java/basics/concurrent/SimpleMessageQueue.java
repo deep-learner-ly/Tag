@@ -1,4 +1,4 @@
-package datastructure;
+package basics.concurrent;
 
 /**
  * @author LongyunBian
