@@ -6,7 +6,7 @@ package algorithm.array.divide;
  */
 public class 第k大数 {
     public static void main(String[] args) {
-        int [] nums = {1,7,4,5,8,2,2};
+        int [] nums = {9,9,1,7,4,5,8,2,2};
         System.out.println(new 第k大数().MaxKth(nums, 5));
     }
     int targetIdx;
