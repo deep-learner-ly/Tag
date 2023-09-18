@@ -1,5 +1,8 @@
 package designpattern.template;
 
+import java.util.Hashtable;
+import java.util.Vector;
+
 /**
  * @author LongyunBian
  * @version 2023/9/1 0:23

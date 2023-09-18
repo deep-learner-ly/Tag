@@ -29,4 +29,15 @@ public class 中序遍历 {
         return res;
 
     }
+    //写一个二叉树中序遍历
+    public static void main(String[] args) {
+        中序遍历 tree = new 中序遍历();
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+        List<Integer> res = tree.inorderTraversal(root);
+        System.out.println(res);
+    }
 }
