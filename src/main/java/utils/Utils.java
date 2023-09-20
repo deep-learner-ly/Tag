@@ -129,6 +129,17 @@ public class Utils {
     public static ListNode findMiddle(ListNode head){ // 1->2 -> 3 -> 4 ==> 3 ; 1->2 -> 3 -> 4 -> 5 ==> 3
         return endOfHalfLinkedList(head).next;
     }
+    public static boolean isPrime(int x){ // 判断是否为素数
+        int sqrt = (int) Math.sqrt(x);
+        for (int i = 2; i <= sqrt; i++) {
+            if(x%i==0){
+                return false;
+            }
+        }
+        return true;
+
+
+    }
 
 
 
