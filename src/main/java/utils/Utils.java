@@ -43,7 +43,7 @@ public class Utils {
         nums[j] = nums[i] -nums[j];
         nums[i] = nums[i] -nums[j];
     }
-    private static ListNode reverse(ListNode head){ // 反转链表
+    public static ListNode reverse(ListNode head){ // 反转链表
         ListNode newHead = null;
         while (head!=null){
             ListNode nxt = head.next;
@@ -113,5 +113,23 @@ public class Utils {
         }
         return res;
     }
+
+    public static ListNode endOfHalfLinkedList(ListNode head){ // 1->2 ->3 -> 4 ==> 2 ; 1->2 ->3 -> 4 -> 5 ==> 2
+        if(head==null){
+            return null;
+        }
+        ListNode first = head, slow = head,pre=null;
+        while (first!=null&&first.next!=null){
+            first = first.next.next;
+            pre = slow;
+            slow = slow.next;
+        }
+        return pre;
+    }
+    public static ListNode findMiddle(ListNode head){ // 1->2 -> 3 -> 4 ==> 3 ; 1->2 -> 3 -> 4 -> 5 ==> 3
+        return endOfHalfLinkedList(head).next;
+    }
+
+
 
 }

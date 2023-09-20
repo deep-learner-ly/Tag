@@ -19,7 +19,7 @@ public class 元空间OOM例子 {
          * 	at java.lang.ClassLoader.defineClass(ClassLoader.java:756)
          * 	... 8 more
          * */
-        while (true) {
+        while (true) { // -XX:MetaspaceSize=10m -XX:MaxMetaspaceSize=10m
             Enhancer enhancer = new Enhancer();
             enhancer.setSuperclass(OOMObject.class);
             enhancer.setUseCache(false);

@@ -1,5 +1,6 @@
 package utils;
 
+import datastructure.ListNode;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -41,4 +42,30 @@ public class UtilsTest {
         assertArrayEquals(new int[][]{{1, 3}, {2, 4}}, matrix2);
 
     }
+
+    @Test
+    public void testEndOfHalfLinkedList_normal() {
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next.next = new ListNode(5);
+
+        ListNode result = Utils.endOfHalfLinkedList(head);
+        assertEquals(2, result.val);
+
+    }
+
+    @Test
+    public void testEndOfHalfLinkedList() {
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+
+        ListNode result = Utils.endOfHalfLinkedList(head);
+        assertEquals(2, result.val);
+
+    }
+
 }
