@@ -68,4 +68,11 @@ public class UtilsTest {
 
     }
 
+    @Test
+    public void biSearchInsert() {
+        int[] nums = {1, 3, 5, 6};
+        int target = 7;
+        int result = Utils.biSearchInsert(0, nums.length - 1, nums, target);
+        assertEquals(4, result);
+    }
 }

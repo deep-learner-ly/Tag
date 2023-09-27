@@ -8,18 +8,16 @@ import datastructure.ListNode;
  */
 public class 排序链表 {
     public ListNode sortList(ListNode head) {
-
-        if (head == null || head.next == null) return head;
-        // find mid
-        ListNode slow = head;
-        ListNode fast = head;
-        ListNode pre = null;
-        while (fast != null && fast.next != null) {
+        if(head==null || head.next==null) return head;
+        ListNode fast = head, slow = head, pre = null;
+        while(fast!=null && fast.next!=null){
+            fast = fast.next.next;
             pre = slow;
             slow = slow.next;
-            fast = fast.next.next;
         }
         pre.next = null;
-        return new 合并两个有序链表().mergeList(sortList(head), sortList(slow));
+        return new 合并两个有序链表().mergeList(sortList(head),sortList(slow));
     }
+
+
 }

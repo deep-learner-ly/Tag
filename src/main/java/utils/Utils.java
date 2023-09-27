@@ -140,6 +140,25 @@ public class Utils {
 
 
     }
+    public static int biSearch(int start,int end,int [] nums, int target ){
+        int idx = biSearchInsert(start, end, nums, target);
+        return nums[idx]==target?idx:-1;
+    }
+    public static int biSearchInsert(int start,int end,int [] nums, int target ){
+        assert start<=end;
+        int lo = start,hi= end;
+        while (lo<=hi){
+            int mid = (lo+hi)>>1;
+            if(nums[mid] == target){
+                return mid;
+            } else if (nums[mid]<target) {
+                lo = mid+1;
+            }else {
+                hi = mid -1;
+            }
+        }
+        return lo;
+    }
 
 
 
