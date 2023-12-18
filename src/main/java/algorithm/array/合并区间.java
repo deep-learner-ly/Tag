@@ -14,6 +14,8 @@ public class 合并区间 {
                 return interval1[0]-interval2[0];
             }
         });
+        // Lambda表达式优化 ly
+        // Arrays.sort(intervals, (interval1, interval2) -> interval1[0] - interval2[0]);
         List<int[]> res=new ArrayList<>();
         for(int i=0;i<intervals.length;i++){
             int left=intervals[i][0];
