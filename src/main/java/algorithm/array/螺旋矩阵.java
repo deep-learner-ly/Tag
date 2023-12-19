@@ -29,5 +29,30 @@ public class 螺旋矩阵 {
         }
         return res;
     }
+    // 下面的方法，不需要额外的空间，
+    public List<Integer> spiralOrderLy(int[][] matrix) {
+        int m = matrix.length, n = matrix[0].length;
+        int top = 0, bottom = m-1,left =0, right = n-1;
+        int total = m*n;
+        List<Integer> res = new ArrayList<>(total);
+
+        while(res.size()<total){
+            // left to right
+            for(int i=left;i<=right&&res.size()<total;i++)  res.add(matrix[top][i]);
+            top++;
+            // top to bottom
+            for(int i = top;i<=bottom&&res.size()<total;i++) res.add(matrix[i][right]);
+            right--;
+            // right to left
+            for(int i=right;i>=left&&res.size()<total;i--) res.add(matrix[bottom][i]);
+            bottom--;
+            // bottom to top
+            for(int i=bottom;i>=top&&res.size()<total;i--) res.add(matrix[i][left]);
+            left++;
+        }
+        return res;
+
+
+    }
 }
 
